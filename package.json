@@ -3,11 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {  
-    "clean:allure": "rimraf allure-results src/reporting/allure-results src/reporting/allure-report",
-  "test": "npm run clean:allure && npx playwright test --config=playwright.config.ts",
-  "test:int": "npx playwright test --config=playwright.config.ts --project=int --headed",
-  "test:qa": "npx playwright test --config=playwright.config.ts --project=qa --headed",
-  "test:allure": "npm run clean:allure && npx playwright test --config=playwright.config.ts && npx allure generate src/reporting/allure-results --clean -o src/reporting/allure-report"
+    "clean:allure": 
+    "rimraf allure-results src/reporting/allure-results src/reporting/allure-report",
+    "test": 
+    "npm run clean:allure && npx playwright test --config=playwright.config.ts",
+    "test:int": 
+    "npx playwright test --config=playwright.config.ts --project=int --headed",
+    "test:qa": 
+    "npx playwright test --config=playwright.config.ts --project=qa --headed",
+    "test:allure": 
+    "npm run clean:allure && npx playwright test --config=playwright.config.ts && npx allure generate src/reporting/allure-results --clean -o src/reporting/allure-report",
+    "install:playwright": 
+    "npx playwright install"
   },
   "keywords": [],
   "author": "",
