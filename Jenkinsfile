@@ -46,9 +46,7 @@ pipeline {
 
         stage('Generate Allure Report') {
             steps {
-                bat "npx allure generate ${env.ALLURE_RESULTS_DIR} --clean -o ${env.ALLURE_REPORT_DIR}"
-            }
-        }
+                bat "npx allure generate ${env.ALLURE_RESULTS_DIR} -o ${env.ALLURE_REPORT_DIR}"
 
         stage('Publish Allure Report') {
             steps {
