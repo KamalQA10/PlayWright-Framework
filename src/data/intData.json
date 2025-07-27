@@ -1,0 +1,18 @@
+{
+  "loanAmount": "5000",
+  "loanPurpose": "Debt consolidation",
+  "firstName": "Ruby",
+ "lastName": "Walsh",
+  "dob": "02/28/1975",
+  "email": "ksb03+87922@lendingpoint.com",
+  "phone": "2127290854",
+  "annualIncome": "81000",
+  "street": "222333 Peachtree Place",
+  "address2": "44",
+  "zip": "30318",
+  "state": "GA",
+  "city": "ATLANTA",
+  "useOfFunds": "make home improvements",
+  "ssn": "666588636",
+  "defaultOTP": "123456"
+}
