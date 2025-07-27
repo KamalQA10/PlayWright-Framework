@@ -19,14 +19,14 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
-                sh 'npm ci'
-                sh 'npx playwright install --with-deps'
+                bat 'npm ci'
+                bat 'npx playwright install'
             }
         }
 
         stage('Clean Allure Reports') {
             steps {
-                sh 'npm run clean:allure'
+                bat 'npm run clean:allure'
             }
         }
 
@@ -34,9 +34,9 @@ pipeline {
             steps {
                 script {
                     if (params.ENVIRONMENT == 'qa') {
-                        sh 'npm run test:qa'
+                        bat 'npm run test:qa'
                     } else if (params.ENVIRONMENT == 'int') {
-                        sh 'npm run test:int'
+                        bat 'npm run test:int'
                     } else {
                         error "Unknown environment: ${params.ENVIRONMENT}"
                     }
@@ -46,14 +46,14 @@ pipeline {
 
         stage('Generate Allure Report') {
             steps {
-                sh "npx allure generate ${ALLURE_RESULTS_DIR} --clean -o ${ALLURE_REPORT_DIR}"
+                bat "npx allure generate ${env.ALLURE_RESULTS_DIR} --clean -o ${env.ALLURE_REPORT_DIR}"
             }
         }
 
         stage('Publish Allure Report') {
             steps {
                 publishHTML(target: [
-                    reportDir: ALLURE_REPORT_DIR,
+                    reportDir: env.ALLURE_REPORT_DIR,
                     reportFiles: 'index.html',
                     reportName: 'Allure Report',
                     allowMissing: false,
@@ -66,7 +66,7 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: "${ALLURE_RESULTS_DIR}/**/*", allowEmptyArchive: true
+            archiveArtifacts artifacts: "${env.ALLURE_RESULTS_DIR}/**/*", allowEmptyArchive: true
         }
     }
 }
