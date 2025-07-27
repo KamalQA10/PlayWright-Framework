@@ -8,6 +8,7 @@ pipeline {
     environment {
         ALLURE_RESULTS_DIR = 'src/reporting/allure-results'
         ALLURE_REPORT_DIR = 'src/reporting/allure-report'
+        PLAYWRIGHT_REPORT_DIR = 'playwright-report'
     }
 
     stages {
@@ -62,11 +63,25 @@ pipeline {
                 ])
             }
         }
+
+        stage('Publish Playwright HTML Report') {
+            steps {
+                publishHTML(target: [
+                    reportDir: env.PLAYWRIGHT_REPORT_DIR,
+                    reportFiles: 'index.html',
+                    reportName: 'Playwright Test Report',
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true
+                ])
+            }
+        }
     }
 
     post {
         always {
             archiveArtifacts artifacts: "${env.ALLURE_RESULTS_DIR}/**/*", allowEmptyArchive: true
+            archiveArtifacts artifacts: "${env.PLAYWRIGHT_REPORT_DIR}/**/*", allowEmptyArchive: true
         }
     }
 }
