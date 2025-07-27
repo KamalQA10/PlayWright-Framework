@@ -2,6 +2,10 @@ image: mcr.microsoft.com/playwright:v1.44.0-jammy
 
 stages:
   - test
+  - report
+
+variables:
+  ALLURE_RESULTS_DIR: src/reporting/allure-results
 
 cache:
   paths:
@@ -11,13 +15,55 @@ before_script:
   - npm ci
   - npx playwright install --with-deps
 
-test:e2e:
+playwright:test:manual:
   stage: test
   script:
-    - npm run test
+    - echo "Running Playwright tests on environment: $ENVIRONMENT"
+    - npm run clean:allure
+    - npx playwright test --project=$ENVIRONMENT --headed
+  variables:
+    ENVIRONMENT: "int"
+  when: manual
+  only:
+    - main
   artifacts:
-    when: always
     paths:
-      - test-results/
-    reports:
-      junit: test-results/results.xml
+      - $ALLURE_RESULTS_DIR
+
+playwright:test:qa:
+  stage: test
+  script:
+    - npm run clean:allure
+    - npm run test:qa
+  artifacts:
+    paths:
+      - $ALLURE_RESULTS_DIR
+  only:
+    - main
+
+playwright:test:int:
+  stage: test
+  script:
+    - npm run clean:allure
+    - npm run test:int
+  artifacts:
+    paths:
+      - $ALLURE_RESULTS_DIR
+  only:
+    - main
+
+generate:allure-report:
+  stage: report
+  script:
+    - echo "Generating Allure report..."
+    - npx allure generate $ALLURE_RESULTS_DIR --clean -o $ALLURE_REPORT_DIR
+  dependencies:
+    - playwright:test:manual
+    - playwright:test:qa
+    - playwright:test:int
+  artifacts:
+    paths:
+      - $ALLURE_REPORT_DIR
+  when: on_success
+  only:
+    - main

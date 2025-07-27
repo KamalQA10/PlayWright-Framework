@@ -5,8 +5,6 @@
   "scripts": {  
     "clean:allure": 
     "rimraf allure-results src/reporting/allure-results src/reporting/allure-report",
-    "test": 
-    "npm run clean:allure && npx playwright test --config=playwright.config.ts",
     "test:int": 
     "npx playwright test --config=playwright.config.ts --project=int --headed",
     "test:qa": 
