@@ -5,24 +5,8 @@ export default class CommonActions {
   private page: Page;
   private defaultTimeout: number;
 
-  constructor(page: Page) {
-    this.page = page;
-    this.defaultTimeout = 90000;
-  }
-/*
-  // For steps with no return value (void)
-  async logStep(description: string, fn: () => Promise<void>): Promise<void> {
-    await allure.step(description, fn);
-  }
-  // For steps with return value (generic)
-  private async logStepWithResult<T>(description: string, fn: () => Promise<T>): Promise<T> {
-    let result: T;
-    await allure.step(description, async () => {
-      result = await fn();
-    });
-    return result!;
-  }
-*/
+  constructor(page: Page) {this.page = page;this.defaultTimeout = 90000;}
+
 async logStep<T>(stepName: string, action: () => Promise<T>): Promise<T> {
   console.log(`➡️ ${stepName}`);
   const result = await action();
@@ -198,8 +182,6 @@ async selectVisibleDropdownOption(optionText: string, timeout = this.defaultTime
       return await locator.count();
     });
   }
-
-  // etc...
 
   async logError(error: any, message = '') {
     console.error(`❌ ${message}:`, error.message);

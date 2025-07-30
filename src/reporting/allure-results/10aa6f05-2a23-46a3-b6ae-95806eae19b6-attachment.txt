@@ -1,6 +1,0 @@
-➡️ ${stepName}
-✅ ${stepName}
-➡️ ${stepName}
-➡️ ${stepName}
-✅ ${stepName}
-✅ ${stepName}

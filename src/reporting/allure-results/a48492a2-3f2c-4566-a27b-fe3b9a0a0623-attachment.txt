@@ -1,2 +1,0 @@
-➡️ Enter first name: Ruby
-➡️ Fill one of: input[name="firstName"], input[placeholder="Input Place Holder"], //*[@class='flex gap-3 mt-8']/div[1]/div with value: "Ruby"

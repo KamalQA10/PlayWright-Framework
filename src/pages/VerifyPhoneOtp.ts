@@ -1,5 +1,5 @@
 import { Page } from '@playwright/test';
-import CommonActions from '../utils/CommonActions';
+import CommonActions from '../utils/helper/CommonActions';
 
 export default class VerifyPhoneOtp {
 

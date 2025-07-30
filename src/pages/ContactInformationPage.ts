@@ -1,5 +1,5 @@
 import { Page } from '@playwright/test';
-import CommonActions from '../utils/CommonActions';
+import CommonActions from '../utils/helper/CommonActions';
 import VerifyPhoneOtp from './VerifyPhoneOtp';
 
 export default class ContactInformationPage {
@@ -36,7 +36,6 @@ export default class ContactInformationPage {
         await this.common.waitForElementToBeClickable(this.continueToVerificationButtonSelectors);
         await this.common.click(this.continueToVerificationButtonSelectors);
       });
-      return new VerifyPhoneOtp(this.page); 
     } 
 
 }

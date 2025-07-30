@@ -1,6 +1,0 @@
-➡️ Enter OTP
-✅ Enter OTP
-➡️ Wait for verify-phone-success URL
-➡️ Wait for URL to match: undefined
-✅ Wait for URL to match: undefined
-✅ Wait for verify-phone-success URL

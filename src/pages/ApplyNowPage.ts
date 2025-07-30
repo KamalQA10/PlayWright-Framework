@@ -1,6 +1,6 @@
 import { Page } from '@playwright/test';
-import ContactInformationPage from './ContactInformationPage';
-import CommonActions from '../utils/CommonActions';
+import ContactInformationPage from '@pages/ContactInformationPage';
+import CommonActions from '@utils/helper/CommonActions';
 
 export default class ApplyNowPage {
   private common: CommonActions;
@@ -52,7 +52,6 @@ export default class ApplyNowPage {
         await this.common.logStep(`click On continue To Contact Button`, async () => {
             await this.common.click(this.continueToContactButtonSelectors);
         });
-      return new ContactInformationPage(this.page); 
     } 
 
 }

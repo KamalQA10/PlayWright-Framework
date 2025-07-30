@@ -1,5 +1,5 @@
 import { Page } from '@playwright/test';
-import CommonActions from '../utils/CommonActions';
+import CommonActions from '../utils/helper/CommonActions';
 import { isRegExp } from 'node:util/types';
 
 export default class StartPage {
