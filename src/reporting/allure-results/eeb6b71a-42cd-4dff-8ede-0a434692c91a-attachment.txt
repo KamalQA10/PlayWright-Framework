@@ -1,0 +1,22 @@
+➡️ Enter first name: Ruby
+➡️ Fill one of: input[name="firstName"], input[placeholder="Input Place Holder"], //*[@class='flex gap-3 mt-8']/div[1]/div with value: "Ruby"
+✅ Fill one of: input[name="firstName"], input[placeholder="Input Place Holder"], //*[@class='flex gap-3 mt-8']/div[1]/div with value: "Ruby"
+✅ Enter first name: Ruby
+➡️ Enter last name: Walsh
+➡️ Fill one of: input[name="lastName"] with value: "Walsh"
+✅ Fill one of: input[name="lastName"] with value: "Walsh"
+✅ Enter last name: Walsh
+➡️ Enter last name: 5000
+➡️ Fill one of: input[name="desiredLoanAmount"] with value: "5000"
+✅ Fill one of: input[name="desiredLoanAmount"] with value: "5000"
+✅ Enter last name: 5000
+➡️ click On Loan Purpose Drop Button
+➡️   Click on: svg[class*="chevron-down"],//svg[contains(@class, "chevron-down")]
+✅   Click on: svg[class*="chevron-down"],//svg[contains(@class, "chevron-down")]
+➡️ Select visible dropdown option "Debt consolidation"
+✅ Select visible dropdown option "Debt consolidation"
+✅ click On Loan Purpose Drop Button
+➡️ click On continue To Contact Button
+➡️   Click on: button:has-text("Continue to Contact Information"),//button[contains(text(),"Continue to Contact Information")],[role="button"][name="Continue to Contact Information"]
+✅   Click on: button:has-text("Continue to Contact Information"),//button[contains(text(),"Continue to Contact Information")],[role="button"][name="Continue to Contact Information"]
+✅ click On continue To Contact Button

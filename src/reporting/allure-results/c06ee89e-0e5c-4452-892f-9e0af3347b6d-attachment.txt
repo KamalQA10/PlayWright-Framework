@@ -1,0 +1,12 @@
+➡️ Enter mobilePhone number: 7722281735
+➡️ Fill one of: input[name="phone"], input[inputmode="tel"], //input[@name="phone"] with value: "7722281735"
+✅ Fill one of: input[name="phone"], input[inputmode="tel"], //input[@name="phone"] with value: "7722281735"
+✅ Enter mobilePhone number: 7722281735
+➡️ Enter EmailId: kamal_1753884221044@lendingpoint.com
+➡️ Fill one of: input[name="email"], input[inputmode="email"], //input[@name="email"] with value: "kamal_1753884221044@lendingpoint.com"
+✅ Fill one of: input[name="email"], input[inputmode="email"], //input[@name="email"] with value: "kamal_1753884221044@lendingpoint.com"
+✅ Enter EmailId: kamal_1753884221044@lendingpoint.com
+➡️ click On continue To Verification Button
+➡️   Click on: button:has-text("Continue to Verification"),//button[contains(text(), "Continue to Verification")],[role="button"][name="Continue to Verification"]
+✅   Click on: button:has-text("Continue to Verification"),//button[contains(text(), "Continue to Verification")],[role="button"][name="Continue to Verification"]
+✅ click On continue To Verification Button

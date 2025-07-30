@@ -9,12 +9,11 @@ export default class CommonActions {
     this.page = page;
     this.defaultTimeout = 90000;
   }
-
+/*
   // For steps with no return value (void)
   async logStep(description: string, fn: () => Promise<void>): Promise<void> {
     await allure.step(description, fn);
   }
-
   // For steps with return value (generic)
   private async logStepWithResult<T>(description: string, fn: () => Promise<T>): Promise<T> {
     let result: T;
@@ -22,6 +21,26 @@ export default class CommonActions {
       result = await fn();
     });
     return result!;
+  }
+*/
+async logStep<T>(stepName: string, action: () => Promise<T>): Promise<T> {
+  console.log(`➡️ ${stepName}`);
+  const result = await action();
+  console.log(`✅ ${stepName}`);
+  return result;
+}
+
+  async goto(url: string, waitUntil: 'load' | 'domcontentloaded' | 'networkidle' = 'load'): Promise<void> {
+    await this.page.goto(url, { waitUntil });
+  }
+
+  async waitForNewTabAndClick( selectors: string[],expectedUrlPattern: RegExp, options?: { timeout?: number }): Promise<Page> {
+    const context = this.page.context();
+    const [newPage] = await Promise.all([context.waitForEvent('page'),this.click(selectors),]);
+      await newPage.waitForFunction(() => window.location.href !== 'about:blank');
+      await newPage.waitForLoadState('domcontentloaded');
+      await newPage.waitForURL(expectedUrlPattern, { timeout: options?.timeout ?? this.defaultTimeout });
+    return newPage;
   }
 
   private getLocator(selector: string): Locator {
@@ -57,7 +76,6 @@ export default class CommonActions {
     throw new Error(`Element not ready for interaction: ${selector}`);
   }
 
-
   async waitForElementToBeClickable(selectors: string[] | string, timeout = this.defaultTimeout): Promise<void> {
     const selectorArray = Array.isArray(selectors) ? selectors : [selectors];
 
@@ -80,7 +98,6 @@ export default class CommonActions {
     });
   }
 
-
   async waitForTitle(title: string, timeout = this.defaultTimeout): Promise<void> {
     await this.logStep(`Wait for title to contain: ${title}`, async () => {
       await this.page.waitForFunction(
@@ -91,13 +108,14 @@ export default class CommonActions {
     });
   }
 
-  async handleNewTab(selectors: string | string[], timeout?: number): Promise<Page> {
-    return await this.logStepWithResult(`Handle new tab triggered by: ${selectors}`, async () => {
+  async handleNewTab(selectors: string | string[]
+  ): Promise<Page> {
+    return await this.logStep(`Handle new tab triggered by: ${selectors}`, async () => {
       const context = this.page.context();
 
       const pagePromise = context.waitForEvent('page');
 
-      await this.click(selectors, timeout);
+      await this.click(selectors);
 
       const newPage = await pagePromise;
       await newPage.waitForLoadState('domcontentloaded');
@@ -105,12 +123,11 @@ export default class CommonActions {
     });
   }
 
-
-  async click(selectors: string | string[], timeout?: number): Promise<void> {
-    await this.logStep(`Click on: ${selectors}`, async () => {
+  async click(selectors: string | string[]): Promise<void> {
+    await this.logStep(`  Click on: ${selectors}`, async () => {
       for (const selector of selectors) {
         try {
-          const locator = await this.waitFor(selector, timeout);
+          const locator = await this.waitFor(selector, this.defaultTimeout);
           await locator.click();
           return;
         } catch (error) {
@@ -162,7 +179,7 @@ async selectVisibleDropdownOption(optionText: string, timeout = this.defaultTime
   }
 
   async getElementText(selector: string, timeout?: number): Promise<string> {
-    return await this.logStepWithResult(`Get inner text of: ${selector}`, async () => {
+    return await this.logStep(`Get inner text of: ${selector}`, async () => {
       const locator = await this.waitFor(selector, timeout);
       return await locator.innerText();
     });
@@ -176,7 +193,7 @@ async selectVisibleDropdownOption(optionText: string, timeout = this.defaultTime
   }
 
   async getCount(selector: string): Promise<number> {
-    return await this.logStepWithResult(`Get count of elements matching: ${selector}`, async () => {
+    return await this.logStep(`Get count of elements matching: ${selector}`, async () => {
       const locator = this.getLocator(selector);
       return await locator.count();
     });

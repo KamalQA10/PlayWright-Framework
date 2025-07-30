@@ -1,0 +1,3 @@
+Failed to fill with selector: input[name="firstName"]
+Failed to fill with selector: input[placeholder="Input Place Holder"]
+Failed to fill with selector: //*[@class='flex gap-3 mt-8']/div[1]/div
