@@ -1,33 +1,25 @@
 import { defineConfig, devices } from '@playwright/test';
+import { envConfig } from './src/config';
 
 export default defineConfig({
   testDir: './src/tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   workers: 4,
-  timeout: 60000,
-  retries: process.env.CI ? 2 : 0,
-reporter: [
-  ['html', { open: 'never' }], // optional: avoid auto-open
-  ['allure-playwright', { resultsDir: './src/reporting/allure-results' }],
-],
-
-projects: [
-  {
-    name: 'qa',
-    metadata: { env: 'qa' },
-    use: {
-      baseURL: 'https://qa-customerportal.lendingpoint.com/apply/',
-      ...devices['Desktop Chrome'],
+  timeout: envConfig.timeout,
+  retries: envConfig.retries,
+  reporter: [
+    ['html', { open: 'never' }],
+    ['allure-playwright', { resultsDir: './src/reporting/allure-results' }],
+  ],
+  projects: [
+    {
+      name: process.env.TEST_ENV || 'int',
+      use: {
+        baseURL: envConfig.baseURL,
+        headless: true,
+        ...devices['Desktop Chrome'],
+      },
     },
-  },
-  {
-    name: 'int',
-    metadata: { env: 'int' },
-    use: {
-      baseURL: 'https://int-customerportal.lendingpoint.com/apply/',
-      ...devices['Desktop Chrome'],
-    },
-  },
-]
+  ],
 });

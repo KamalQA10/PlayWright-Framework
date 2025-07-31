@@ -25,7 +25,8 @@ export default class ContactInformationPage {
   }
 
     async enterEmail(): Promise<void> {
-      const generatedEmail = `kamal_${Date.now()}@lendingpoint.com`;
+      const generatedEmail = '001ksb@gmail.com';
+      //const generatedEmail = `kamal+${Date.now()}@lendingpoint.com`;
       await this.common.logStep(`Enter EmailId: ${generatedEmail}`, async () => {
         await this.common.fillOneOf(this.emailAddressSelectors, generatedEmail);
       });

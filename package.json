@@ -5,10 +5,8 @@
   "scripts": {  
     "clean:allure": 
     "rimraf allure-results src/reporting/allure-results src/reporting/allure-report",
-    "test:int": 
-    "npx playwright test --config=playwright.config.ts --project=int --headed",
-    "test:qa": 
-    "npx playwright test --config=playwright.config.ts --project=qa --headed",
+"test:int": "set TEST_ENV=int&& npx playwright test --project=int --headed",
+"test:qa":  "set TEST_ENV=qa&& npx playwright test --project=qa --headed",
     "test:allure": 
     "npm run clean:allure && npx playwright test --config=playwright.config.ts && npx allure generate src/reporting/allure-results --clean -o src/reporting/allure-report",
     "install:playwright": 

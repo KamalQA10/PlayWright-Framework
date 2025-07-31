@@ -36,7 +36,7 @@ async logStep<T>(stepName: string, action: () => Promise<T>): Promise<T> {
   async waitFor(
     selector: string,
     timeout = this.defaultTimeout,
-    retries = 3
+    retries = 1
   ): Promise<Locator> {
     const locator = this.getLocator(selector);
 

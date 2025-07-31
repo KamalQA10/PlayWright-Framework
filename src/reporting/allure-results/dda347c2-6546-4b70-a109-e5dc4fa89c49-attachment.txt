@@ -1,0 +1,41 @@
+➡️  Navigate to start page
+✅  Navigate to start page
+➡️  Click on Apply Now & wait for new tab
+➡️   Click on: //button[contains(text(), "Apply Now")],button:has-text("Apply Now")
+✅   Click on: //button[contains(text(), "Apply Now")],button:has-text("Apply Now")
+✅  Click on Apply Now & wait for new tab
+➡️ Enter first name: Ruby
+➡️ Fill one of: input[name="firstName"], input[placeholder="Input Place Holder"], //*[@class='flex gap-3 mt-8']/div[1]/div with value: "Ruby"
+✅ Fill one of: input[name="firstName"], input[placeholder="Input Place Holder"], //*[@class='flex gap-3 mt-8']/div[1]/div with value: "Ruby"
+✅ Enter first name: Ruby
+➡️ Enter last name: Walsh
+➡️ Fill one of: input[name="lastName"] with value: "Walsh"
+✅ Fill one of: input[name="lastName"] with value: "Walsh"
+✅ Enter last name: Walsh
+➡️ Enter last name: 5000
+➡️ Fill one of: input[name="desiredLoanAmount"] with value: "5000"
+✅ Fill one of: input[name="desiredLoanAmount"] with value: "5000"
+✅ Enter last name: 5000
+➡️ click On Loan Purpose Drop Button
+➡️   Click on: svg[class*="chevron-down"],//svg[contains(@class, "chevron-down")]
+✅   Click on: svg[class*="chevron-down"],//svg[contains(@class, "chevron-down")]
+➡️ Select visible dropdown option "Debt consolidation"
+✅ Select visible dropdown option "Debt consolidation"
+✅ click On Loan Purpose Drop Button
+➡️ click On continue To Contact Button
+➡️   Click on: button:has-text("Continue to Contact Information"),//button[contains(text(),"Continue to Contact Information")],[role="button"][name="Continue to Contact Information"]
+✅   Click on: button:has-text("Continue to Contact Information"),//button[contains(text(),"Continue to Contact Information")],[role="button"][name="Continue to Contact Information"]
+✅ click On continue To Contact Button
+➡️ Enter mobilePhone number: 7722281397
+➡️ Fill one of: input[name="phone"], input[inputmode="tel"], //input[@name="phone"] with value: "7722281397"
+✅ Fill one of: input[name="phone"], input[inputmode="tel"], //input[@name="phone"] with value: "7722281397"
+✅ Enter mobilePhone number: 7722281397
+➡️ Enter EmailId: kamal_1753961094182@lendingpoint.com
+➡️ Fill one of: input[name="email"], input[inputmode="email"], //input[@name="email"] with value: "kamal_1753961094182@lendingpoint.com"
+✅ Fill one of: input[name="email"], input[inputmode="email"], //input[@name="email"] with value: "kamal_1753961094182@lendingpoint.com"
+✅ Enter EmailId: kamal_1753961094182@lendingpoint.com
+➡️ click On continue To Verification Button
+➡️   Click on: button:has-text("Continue to Verification"),//button[contains(text(), "Continue to Verification")],[role="button"][name="Continue to Verification"]
+✅   Click on: button:has-text("Continue to Verification"),//button[contains(text(), "Continue to Verification")],[role="button"][name="Continue to Verification"]
+✅ click On continue To Verification Button
+➡️ Enter OTP
