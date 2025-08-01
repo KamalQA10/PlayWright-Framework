@@ -1,0 +1,2 @@
+API Base URL: https://intapi.lendingpoint.com
+API Key: xHvLmlZ3wPt2oBOPMV7g7U65ZvG8P/4V22l1aASRAuWrSxr0x9Oqm4Nb6DCJCAKF

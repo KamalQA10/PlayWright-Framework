@@ -1,0 +1,21 @@
+export const qualifyLeadPayload = {
+  loanAmount: "5000",
+  firstName: "Ruby",
+  lastName: "Walsh",
+  dob: "02/28/1975",
+  email: "randomemail+420@lendingpoint.com",
+  phone: "2127290854",
+  annualIncome: "81000",
+  street: "222333 Peachtree Place",
+  unit: "",
+  zip: "30318",
+  state: "GA",
+  city: "ATLANTA",
+  authToPullCredit: "true",
+  useOfFunds: "make home improvements",
+  employmentStatus: "Employee",
+  ssn: "666588636",
+  source: "Organic",
+  subSource: "LPCustomerPortal",
+  subProvider: "lendingPoint/Api"
+};

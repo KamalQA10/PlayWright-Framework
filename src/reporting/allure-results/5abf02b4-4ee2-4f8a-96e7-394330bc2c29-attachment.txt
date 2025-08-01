@@ -1,7 +1,0 @@
-➡️  Navigate to start page
-✅  Navigate to start page
-➡️  Click on Apply Now & wait for new tab
-➡️   Click on: //button[contains(text(), "Apply Now")],button:has-text("Apply Now")
-✅   Click on: //button[contains(text(), "Apply Now")],button:has-text("Apply Now")
-✅  Click on Apply Now & wait for new tab
-Looking for file: C:\Users\kamal.bisht\Desktop\PlayWrite_Framework\src\data\int Data.json

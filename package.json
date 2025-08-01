@@ -2,15 +2,15 @@
   "name": "playwrite_framework",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {  
-    "clean:allure": 
-    "rimraf allure-results src/reporting/allure-results src/reporting/allure-report",
-"test:int": "set TEST_ENV=int&& npx playwright test --project=int --headed",
-"test:qa":  "set TEST_ENV=qa&& npx playwright test --project=qa --headed",
-    "test:allure": 
-    "npm run clean:allure && npx playwright test --config=playwright.config.ts && npx allure generate src/reporting/allure-results --clean -o src/reporting/allure-report",
-    "install:playwright": 
-    "npx playwright install"
+  "scripts": {
+    "clean:allure": "rimraf allure-results src/reporting/allure-results src/reporting/allure-report",
+    "test:int": "set TEST_ENV=int&& ts-node -r tsconfig-paths/register node_modules/.bin/playwright test --project=int --headed",
+    "test:qa": "set TEST_ENV=qa&& ts-node -r tsconfig-paths/register node_modules/.bin/playwright test --project=qa --headed",
+    "test:allure": "npm run clean:allure && ts-node -r tsconfig-paths/register node_modules/.bin/playwright test --config=playwright.config.ts && npx allure generate src/reporting/allure-results --clean -o src/reporting/allure-report",
+    "install:playwright": "npx playwright install",
+    
+    "API Running Commands": "RUNNING COMMANDS..............................................................",
+    "test:api": "npx playwright test src/api/tests_API"
   },
   "keywords": [],
   "author": "",
@@ -18,8 +18,15 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.54.1",
+    "@types/axios": "^0.9.36",
     "@types/node": "^24.0.15",
     "allure-playwright": "^3.3.2",
-    "rimraf": "^6.0.1"
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "dotenv": "^17.2.1"
   }
 }

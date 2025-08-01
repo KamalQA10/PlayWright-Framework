@@ -5,15 +5,30 @@
     "moduleResolution": "node",
     "baseUrl": "src",
     "paths": {
-      "@fixtures/*": ["utils/fixtures/*"],
-      "@pages/*": ["pages/*"],
-      "@utils/*": ["utils/*"],
+      // Added for UI layer
+      "@fixtures/*": ["uiUtils/fixtures/*"],
+      "@pages": ["ui/pages/index.ts"],
+      "@uiUtils/*": ["ui/uiUtils/*"],
       "@tests/*": ["tests/*"],
-      "@data/*": ["data/*"]
+      "@data/*": ["ui/data/*"],
+      "@config_UI/*": ["ui/config_UI/*"],
+
+      // Added for API layer
+      "@apiUtils/*": ["api/utils_API/*"],
+      "@apiConfig/*": ["api/config_API/*"],
+      "@apiData/*": ["api/data_API/*"],
+      "@apiServices/*": ["api/services_API/*"],
+      "@apiTests/*": ["api/tests_API/*"]
     },
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["src"]
+  "include": ["src"],
+
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
 }
