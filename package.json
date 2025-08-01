@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "clean:allure": "rimraf allure-results src/reporting/allure-results src/reporting/allure-report",
-    "test:int": "set TEST_ENV=int&& ts-node -r tsconfig-paths/register node_modules/.bin/playwright test --project=int --headed",
-    "test:qa": "set TEST_ENV=qa&& ts-node -r tsconfig-paths/register node_modules/.bin/playwright test --project=qa --headed",
+    "test:int": "set TEST_ENV=int&& npx playwright test --project=int --headed",
+    "test:qa": "set TEST_ENV=qa&& npx playwright test --project=qa --headed",
     "test:allure": "npm run clean:allure && ts-node -r tsconfig-paths/register node_modules/.bin/playwright test --config=playwright.config.ts && npx allure generate src/reporting/allure-results --clean -o src/reporting/allure-report",
     "install:playwright": "npx playwright install",
     
