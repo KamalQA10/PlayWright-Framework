@@ -1,9 +1,8 @@
-pipeline {
+pipeline 
+{
     agent any
 
-    parameters {
-        choice(name: 'ENVIRONMENT', choices: ['qa_UI', 'int_UI', 'qa_API', 'int_API'], description: 'Select test type and environment')
-    }
+    parameters {choice(name: 'ENVIRONMENT', choices: ['qa_UI', 'int_UI', 'qa_API', 'int_API'], description: 'Select test type and environment')}
 
     environment {
         ALLURE_RESULTS_DIR = 'src/reporting/allure-results'
@@ -42,3 +41,11 @@ pipeline {
                         bat 'npm run test:api_QA'
                     } else if (params.ENVIRONMENT == 'int_API') {
                         bat 'npm run test:api_INT'
+                    } else {
+                        error "Unknown environment: ${params.ENVIRONMENT}"
+                    }
+                }
+            }
+        }
+    }
+}    
