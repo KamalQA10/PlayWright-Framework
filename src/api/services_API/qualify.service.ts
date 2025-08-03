@@ -1,14 +1,14 @@
 import { apiClient } from '@apiUtils/apiClient';
-import { apiEnvConfig } from '@apiConfig/envConfig';
+import { envConfigAPI } from '@apiConfig/envConfigAPI';
 
 export async function qualifyLead(payload: any) {
-  const response = await apiClient.post(`/api/lead/qualify?key=${encodeURIComponent(apiEnvConfig.apiKey)}`,payload,{
+  const response = await apiClient.post(`/api/lead/qualify?key=${encodeURIComponent(envConfigAPI.apiKey)}`,payload,{
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         'Exchange-Format': 'core',
       },
-      baseURL: apiEnvConfig.baseUrl,
+      baseURL: envConfigAPI.baseUrl,
     }
   );
   return response;

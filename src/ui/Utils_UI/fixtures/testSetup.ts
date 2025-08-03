@@ -1,6 +1,6 @@
 import { test as base, Browser, Page, BrowserContext, TestInfo } from '@playwright/test';
 import { StartPage, ApplyNowPage, ContactInformationPage, VerifyPhoneOtp } from '@pages';
-import { loadTestData } from '@data/env.dataUI';
+import { loadTestData } from '@config_UI/dataConfigUI';
 
 type Fixtures = {
   browser: Browser;
@@ -28,8 +28,7 @@ export const test = base.extend<Fixtures>({
   },
 
   testData: async ({}, use: (data: any) => Promise<void>, testInfo: TestInfo) => {
-    const env = testInfo.project.name;
-    const data = loadTestData(env);
+    const data = loadTestData(process.env.TEST_ENV ||'');
     await use(data);
   },
 

@@ -1,36 +1,37 @@
 import { defineConfig, devices } from '@playwright/test';
-import { UIEnvConfig } from './src/ui/config_UI';
-import { apiEnvConfig } from './src/api/config_API/envConfig';
-import dotenv from 'dotenv';
-dotenv.config();
+import dotenvFlow from 'dotenv-flow';
+dotenvFlow.config({ node_env: process.env.TEST_ENV });
+
+import { envConfigUI } from './src/ui/config_UI/envConfigUI';
+import { envConfigAPI } from './src/api/config_API/envConfigAPI';
 
 export default defineConfig({
-  testDir: './src/ui/tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   workers: 4,
-  timeout: UIEnvConfig.timeout,
-  retries: UIEnvConfig.retries,
   reporter: [
     ['html', { open: 'never' }],
     ['allure-playwright', { resultsDir: './src/reporting/allure-results' }],
   ],
   projects: [
     {
-      name: process.env.TEST_ENV || 'int',
+      name: 'ui',
+      testDir: './src/ui/tests',
+      timeout: envConfigUI.timeout,
+      retries: envConfigUI.retries,
       use: {
-        baseURL: UIEnvConfig.baseURL,
+        baseURL: envConfigUI.baseUrl,
         headless: true,
         ...devices['Desktop Chrome'],
       },
     },
-  {
+    {
       name: 'api',
       testDir: './src/api/tests_API',
-      timeout: apiEnvConfig.timeout,
-      retries: apiEnvConfig.retries,
+      timeout: envConfigAPI.timeout,
+      retries: envConfigAPI.retries,
       use: {
-        baseURL: apiEnvConfig.baseUrl,
+        baseURL: envConfigAPI.baseUrl,
         headless: true,
       },
     },
