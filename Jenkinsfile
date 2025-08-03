@@ -32,13 +32,19 @@ pipeline {
         }
 
         stage('Run Playwright Tests') {
-            steps {
-                script {
-                    if (params.ENVIRONMENT == 'qa') {
+            steps 
+            {
+                script 
+                {
+                    if (params.ENVIRONMENT == 'qa_UI') {
                         bat 'npm run test:qa'
-                    } else if (params.ENVIRONMENT == 'int') {
+                    } else if (params.ENVIRONMENT == 'int_UI') {
                         bat 'npm run test:int'
-                    } else {
+                    } else if (param.ENVIRONMENT == 'qa_API') {
+                        bat 'npm run test:api'
+                    }
+                }    
+            } else {
                         error "Unknown environment: ${params.ENVIRONMENT}"
                     }
                 }
