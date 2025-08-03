@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        choice(name: 'ENVIRONMENT', choices: ['qa', 'int'], description: 'Select environment to run tests')
+        choice(name: 'ENVIRONMENT', choices: ['qa_UI', 'int_UI', 'qa_API', 'int_API'], description: 'Select test type and environment')
     }
 
     environment {
@@ -21,7 +21,7 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 bat 'npm ci'
-                bat 'npx playwright install'
+                bat 'npm run install:playwright'
             }
         }
 
@@ -32,62 +32,13 @@ pipeline {
         }
 
         stage('Run Playwright Tests') {
-            steps 
-            {
-                script 
-                {
+            steps {
+                script {
                     if (params.ENVIRONMENT == 'qa_UI') {
                         bat 'npm run test:qa'
                     } else if (params.ENVIRONMENT == 'int_UI') {
                         bat 'npm run test:int'
-                    } else if (param.ENVIRONMENT == 'qa_API') {
-                        bat 'npm run test:api'
-                    }
-                }    
-            } else {
-                        error "Unknown environment: ${params.ENVIRONMENT}"
-                    }
-                }
-            }
-        }
-
-        stage('Generate Allure Report') {
-            steps {
-                bat "npx allure generate ${env.ALLURE_RESULTS_DIR} -o ${env.ALLURE_REPORT_DIR}"
-            }
-        }
-
-        stage('Publish Allure Report') {
-            steps {
-                publishHTML(target: [
-                    reportDir: env.ALLURE_REPORT_DIR,
-                    reportFiles: 'index.html',
-                    reportName: 'Allure Report',
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true
-                ])
-            }
-        }
-
-        stage('Publish Playwright HTML Report') {
-            steps {
-                publishHTML(target: [
-                    reportDir: env.PLAYWRIGHT_REPORT_DIR,
-                    reportFiles: 'index.html',
-                    reportName: 'Playwright Test Report',
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true
-                ])
-            }
-        }
-    }
-
-    post {
-        always {
-            archiveArtifacts artifacts: "${env.ALLURE_RESULTS_DIR}/**/*", allowEmptyArchive: true
-            archiveArtifacts artifacts: "${env.PLAYWRIGHT_REPORT_DIR}/**/*", allowEmptyArchive: true
-        }
-    }
-}
+                    } else if (params.ENVIRONMENT == 'qa_API') {
+                        bat 'npm run test:api_QA'
+                    } else if (params.ENVIRONMENT == 'int_API') {
+                        bat 'npm run test:api_INT'
