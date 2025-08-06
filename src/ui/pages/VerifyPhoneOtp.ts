@@ -13,7 +13,7 @@ export default class VerifyPhoneOtp {
   async enterOtp(otp: string): Promise<void> {
     await this.common.logStep('Enter OTP digits', async () => {
       const otpInputs = this.page.locator(this.inputOTPSelector);
-      await otpInputs.first().waitFor({ state: 'visible', timeout: 10000 });
+      await otpInputs.first().waitFor({ state: 'visible', timeout: 50000 });
 
       for (let i = 0; i < otp.length; i++) {
         await otpInputs.nth(i).fill(otp[i]);

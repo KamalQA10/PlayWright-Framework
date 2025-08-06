@@ -1,0 +1,45 @@
+➡️ Navigate to start page
+➡️ Navigate to URL: /
+✅ Navigate to URL: /
+✅ Navigate to start page
+➡️ Click on Apply Now & wait for new tab
+➡️ Click on one of: //button[contains(text(), "Apply Now")] | button:has-text("Apply Now") and wait for new tab matching /apply/
+✅ Click on one of: //button[contains(text(), "Apply Now")] | button:has-text("Apply Now") and wait for new tab matching /apply/
+✅ Click on Apply Now & wait for new tab
+➡️ Enter first name: Ruby
+➡️ Fill one of: input[name="firstName"], input[placeholder="Input Place Holder"], //*[@class='flex gap-3 mt-8']/div[1]/div with value: "Ruby"
+✅ Fill one of: input[name="firstName"], input[placeholder="Input Place Holder"], //*[@class='flex gap-3 mt-8']/div[1]/div with value: "Ruby"
+✅ Enter first name: Ruby
+➡️ Enter last name: Walsh
+➡️ Fill one of: input[name="lastName"] with value: "Walsh"
+✅ Fill one of: input[name="lastName"] with value: "Walsh"
+✅ Enter last name: Walsh
+➡️ Enter loan amount: 5000
+➡️ Fill one of: input[name="desiredLoanAmount"] with value: "5000"
+✅ Fill one of: input[name="desiredLoanAmount"] with value: "5000"
+✅ Enter loan amount: 5000
+➡️ Select loan purpose: Debt consolidation
+➡️ Clicking on: svg[class*="chevron-down"] | //svg[contains(@class, "chevron-down")]
+✅ Clicking on: svg[class*="chevron-down"] | //svg[contains(@class, "chevron-down")]
+➡️ Select dropdown option: Debt consolidation
+✅ Select dropdown option: Debt consolidation
+✅ Select loan purpose: Debt consolidation
+➡️ Click on Continue to Contact Information button
+➡️ Clicking on: button:has-text("Continue to Contact Information") | //button[contains(text(),"Continue to Contact Information")] | [role="button"][name="Continue to Contact Information"]
+✅ Clicking on: button:has-text("Continue to Contact Information") | //button[contains(text(),"Continue to Contact Information")] | [role="button"][name="Continue to Contact Information"]
+✅ Click on Continue to Contact Information button
+➡️ Enter mobile phone number: 7722289880
+➡️ Fill one of: input[name="phone"], input[inputmode="tel"], //input[@name="phone"] with value: "9183526880"
+✅ Fill one of: input[name="phone"], input[inputmode="tel"], //input[@name="phone"] with value: "9183526880"
+✅ Enter mobile phone number: 7722289880
+➡️ Enter email: kbisht74414@lendingpoint.com
+➡️ Fill one of: input[name="email"], input[inputmode="email"], //input[@name="email"] with value: "kbisht@lendingpoint.com"
+✅ Fill one of: input[name="email"], input[inputmode="email"], //input[@name="email"] with value: "kbisht@lendingpoint.com"
+✅ Enter email: kbisht74414@lendingpoint.com
+➡️ Click on Continue to Verification button
+➡️ Clicking on: button:has-text("Continue to Verification") | //button[contains(text(), "Continue to Verification")] | [role="button"][name="Continue to Verification"]
+✅ Clicking on: button:has-text("Continue to Verification") | //button[contains(text(), "Continue to Verification")] | [role="button"][name="Continue to Verification"]
+✅ Click on Continue to Verification button
+➡️ Enter OTP digits
+✅ Enter OTP digits
+➡️ Wait for URL: https://int-customerportal.lendingpoint.com/apply/income-fill-address

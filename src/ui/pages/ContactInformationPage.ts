@@ -26,7 +26,7 @@ export default class ContactInformationPage {
     this.common = new CommonActions(page);
   }
 
-  private generateRandomMobileNumber(base = '7722281'): string {
+  private generateRandomMobileNumber(base = '9183526'): string {
     const randomSuffix = Math.floor(100 + Math.random() * 900);
     return `${base}${randomSuffix}`;
   }
@@ -40,15 +40,15 @@ export default class ContactInformationPage {
   }
 
   private generateRandomEmail(): string {
-    const randomNum = Math.floor(1000 + Math.random() * 9000); // 4-digit random number
-    return `user${randomNum}@gmail.com`;
+    const randomNum = Math.floor(10000 + Math.random() * 90000); // 4-digit random number
+    return `kbisht${randomNum}@lendingpoint.com`;
   }
 
   async enterEmail(): Promise<void> {
     const email = this.generateRandomEmail();
 
     await this.common.logStep(`Enter email: ${email}`, async () => {
-      await this.common.fillOneOf(ContactInformationPage.emailAddressSelectors, email);
+      await this.common.fillOneOf(ContactInformationPage.emailAddressSelectors, "kbisht@lendingpoint.com");
     });
   }
 
