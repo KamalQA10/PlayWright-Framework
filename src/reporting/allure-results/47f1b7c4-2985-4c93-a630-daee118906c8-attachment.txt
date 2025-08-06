@@ -1,0 +1,60 @@
+➡️ [STEP]  Navigate to start page
+✅ [PASS]  Navigate to start page
+➡️ [STEP]  Click on Apply Now & wait for new tab
+➡️ [STEP] 🔘 Attempting to click on one of: //button[contains(text(), "Apply Now")] | button:has-text("Apply Now")
+✅ Click succeeded for selector: //button[contains(text(), "Apply Now")]
+✅ [PASS] 🔘 Attempting to click on one of: //button[contains(text(), "Apply Now")] | button:has-text("Apply Now")
+✅ [PASS]  Click on Apply Now & wait for new tab
+➡️ [STEP] Enter first name: Ruby
+➡️ [STEP] Fill one of: input[name="firstName"], input[placeholder="Input Place Holder"], //*[@class='flex gap-3 mt-8']/div[1]/div with value: "Ruby"
+✅ [PASS] Fill one of: input[name="firstName"], input[placeholder="Input Place Holder"], //*[@class='flex gap-3 mt-8']/div[1]/div with value: "Ruby"
+✅ [PASS] Enter first name: Ruby
+➡️ [STEP] Enter last name: Walsh
+➡️ [STEP] Fill one of: input[name="lastName"] with value: "Walsh"
+✅ [PASS] Fill one of: input[name="lastName"] with value: "Walsh"
+✅ [PASS] Enter last name: Walsh
+➡️ [STEP] Enter last name: 5000
+➡️ [STEP] Fill one of: input[name="desiredLoanAmount"] with value: "5000"
+✅ [PASS] Fill one of: input[name="desiredLoanAmount"] with value: "5000"
+✅ [PASS] Enter last name: 5000
+➡️ [STEP] Click on DropDown & Select Loan Purpose
+➡️ [STEP] 🔘 Attempting to click on one of: svg[class*="chevron-down"] | //svg[contains(@class, "chevron-down")]
+✅ Click succeeded for selector: svg[class*="chevron-down"]
+✅ [PASS] 🔘 Attempting to click on one of: svg[class*="chevron-down"] | //svg[contains(@class, "chevron-down")]
+➡️ [STEP] Select visible dropdown option "Debt consolidation"
+✅ [PASS] Select visible dropdown option "Debt consolidation"
+✅ [PASS] Click on DropDown & Select Loan Purpose
+➡️ [STEP] click On continue To Contact Button
+➡️ [STEP] 🔘 Attempting to click on one of: button:has-text("Continue to Contact Information") | //button[contains(text(),"Continue to Contact Information")] | [role="button"][name="Continue to Contact Information"]
+✅ Click succeeded for selector: button:has-text("Continue to Contact Information")
+✅ [PASS] 🔘 Attempting to click on one of: button:has-text("Continue to Contact Information") | //button[contains(text(),"Continue to Contact Information")] | [role="button"][name="Continue to Contact Information"]
+✅ [PASS] click On continue To Contact Button
+➡️ [STEP] Enter mobilePhone number: 7722281345
+➡️ [STEP] Fill one of: input[name="phone"], input[inputmode="tel"], //input[@name="phone"] with value: "7722281345"
+✅ [PASS] Fill one of: input[name="phone"], input[inputmode="tel"], //input[@name="phone"] with value: "7722281345"
+✅ [PASS] Enter mobilePhone number: 7722281345
+➡️ [STEP] Enter EmailId: 001ksb@gmail.com
+➡️ [STEP] Fill one of: input[name="email"], input[inputmode="email"], //input[@name="email"] with value: "001ksb@gmail.com"
+✅ [PASS] Fill one of: input[name="email"], input[inputmode="email"], //input[@name="email"] with value: "001ksb@gmail.com"
+✅ [PASS] Enter EmailId: 001ksb@gmail.com
+➡️ [STEP] click On continue To Verification Button
+➡️ [STEP] 🔘 Attempting to click on one of: button:has-text("Continue to Verification") | //button[contains(text(), "Continue to Verification")] | [role="button"][name="Continue to Verification"]
+✅ Click succeeded for selector: button:has-text("Continue to Verification")
+✅ [PASS] 🔘 Attempting to click on one of: button:has-text("Continue to Verification") | //button[contains(text(), "Continue to Verification")] | [role="button"][name="Continue to Verification"]
+✅ [PASS] click On continue To Verification Button
+➡️ [STEP] Enter OTP
+✅ [PASS] Enter OTP
+➡️ [STEP] Wait for verify-phone-success URL
+➡️ [STEP] Wait for URL to match: https://int-customerportal.lendingpoint.com/apply/income-fill-address
+✅ [PASS] Wait for URL to match: https://int-customerportal.lendingpoint.com/apply/income-fill-address
+✅ [PASS] Wait for verify-phone-success URL
+➡️ [STEP] Enter Address field
+➡️ [STEP] Type "222333 Peachtree Place" into: input[name="address"]
+✅ [PASS] Type "222333 Peachtree Place" into: input[name="address"]
+✅ [PASS] Enter Address field
+➡️ [STEP] Enter City field
+➡️ [STEP] Type "ATLANTA" into: input[name="city"]
+✅ [PASS] Type "ATLANTA" into: input[name="city"]
+✅ [PASS] Enter City field
+➡️ [STEP] Click on DropDown & Select State
+➡️ [STEP] 🔘 Attempting to click on one of: //button[@role="combobox"

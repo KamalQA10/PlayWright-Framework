@@ -8,7 +8,7 @@
       // Added for UI layer
       "@fixtures/*": ["uiUtils/fixtures/*"],
       "@pages": ["ui/pages/index.ts"],
-      "@uiUtils/*": ["ui/uiUtils/*"],
+      "@uiUtils/*": ["ui/Utils_UI/*"],
       "@tests/*": ["tests/*"],
       "@data/*": ["ui/data/*"],
       "@config_UI/*": ["ui/config_UI/*"],

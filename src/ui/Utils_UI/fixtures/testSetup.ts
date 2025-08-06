@@ -1,5 +1,8 @@
 import { test as base, Browser, Page, BrowserContext, TestInfo } from '@playwright/test';
-import { StartPage, ApplyNowPage, ContactInformationPage, VerifyPhoneOtp } from '@pages';
+import { 
+          StartPage, ApplyNowPage, ContactInformationPage, VerifyPhoneOtp, IncomeFillAddressPage,
+          YourIncomePage, AboutYouPage
+        } from '@pages';
 import { loadTestData } from '@config_UI/dataConfigUI';
 
 type Fixtures = {
@@ -10,6 +13,9 @@ type Fixtures = {
   applyNowPage: ApplyNowPage;
   contactInfoPage: ContactInformationPage;
   verifyPhoneOtp: VerifyPhoneOtp;
+  incomeFillAddressPage: IncomeFillAddressPage;
+  yourIncomePage: YourIncomePage;
+  aboutYouPage: AboutYouPage;
   testData: any;
   newTabPage: Page;
 };
@@ -57,6 +63,22 @@ export const test = base.extend<Fixtures>({
     const otp = new VerifyPhoneOtp(newTabPage);
     await use(otp);
   },
+
+  incomeFillAddressPage: async ({ newTabPage }, use) => {
+    const yourAddress = new IncomeFillAddressPage(newTabPage);
+    await use(yourAddress);
+  },
+
+  yourIncomePage: async ({ newTabPage }, use) => {
+    const yourIncome = new YourIncomePage(newTabPage);
+    await use(yourIncome);
+  },
+
+  aboutYouPage: async ({ newTabPage }, use) => {
+    const aboutYou = new AboutYouPage(newTabPage);
+    await use(aboutYou);
+  },
+
 });
 
 export const expect = base.expect;

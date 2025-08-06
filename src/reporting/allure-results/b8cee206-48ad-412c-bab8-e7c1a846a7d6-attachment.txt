@@ -1,0 +1,8 @@
+➡️  Navigate to start page
+✅  Navigate to start page
+➡️  Click on Apply Now & wait for new tab
+➡️   Click on: //button[contains(text(), "Apply Now")],button:has-text("Apply Now")
+✅   Click on: //button[contains(text(), "Apply Now")],button:has-text("Apply Now")
+✅  Click on Apply Now & wait for new tab
+➡️ Enter first name: Ruby
+➡️ Fill one of: input[name="firstName"], input[placeholder="Input Place Holder"], //*[@class='flex gap-3 mt-8']/div[1]/div with value: "Ruby"

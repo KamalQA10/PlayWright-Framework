@@ -1,2 +1,0 @@
-⚠️ Click failed for selector: //button[contains(text(), "Apply Now")]
-⚠️ Click failed for selector: button:has-text("Apply Now")

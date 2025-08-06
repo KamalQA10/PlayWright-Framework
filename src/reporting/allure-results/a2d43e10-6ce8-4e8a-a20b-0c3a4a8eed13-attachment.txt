@@ -1,0 +1,86 @@
+➡️ Navigate to start page
+➡️ Navigate to URL: /
+✅ Navigate to URL: /
+✅ Navigate to start page
+➡️ Click on Apply Now & wait for new tab
+➡️ Click on one of: //button[contains(text(), "Apply Now")] | button:has-text("Apply Now") and wait for new tab matching /apply/
+✅ Click on one of: //button[contains(text(), "Apply Now")] | button:has-text("Apply Now") and wait for new tab matching /apply/
+✅ Click on Apply Now & wait for new tab
+➡️ Enter first name: Ruby
+➡️ Fill one of: input[name="firstName"], input[placeholder="Input Place Holder"], //*[@class='flex gap-3 mt-8']/div[1]/div with value: "Ruby"
+✅ Fill one of: input[name="firstName"], input[placeholder="Input Place Holder"], //*[@class='flex gap-3 mt-8']/div[1]/div with value: "Ruby"
+✅ Enter first name: Ruby
+➡️ Enter last name: Walsh
+➡️ Fill one of: input[name="lastName"] with value: "Walsh"
+✅ Fill one of: input[name="lastName"] with value: "Walsh"
+✅ Enter last name: Walsh
+➡️ Enter loan amount: 5000
+➡️ Fill one of: input[name="desiredLoanAmount"] with value: "5000"
+✅ Fill one of: input[name="desiredLoanAmount"] with value: "5000"
+✅ Enter loan amount: 5000
+➡️ Select loan purpose: Debt consolidation
+➡️ Clicking on: svg[class*="chevron-down"] | //svg[contains(@class, "chevron-down")]
+✅ Clicking on: svg[class*="chevron-down"] | //svg[contains(@class, "chevron-down")]
+➡️ Select dropdown option: Debt consolidation
+✅ Select dropdown option: Debt consolidation
+✅ Select loan purpose: Debt consolidation
+➡️ Click on Continue to Contact Information button
+➡️ Clicking on: button:has-text("Continue to Contact Information") | //button[contains(text(),"Continue to Contact Information")] | [role="button"][name="Continue to Contact Information"]
+✅ Clicking on: button:has-text("Continue to Contact Information") | //button[contains(text(),"Continue to Contact Information")] | [role="button"][name="Continue to Contact Information"]
+✅ Click on Continue to Contact Information button
+➡️ Enter mobile phone number: 7722281164
+➡️ Fill one of: input[name="phone"], input[inputmode="tel"], //input[@name="phone"] with value: "7722281164"
+✅ Fill one of: input[name="phone"], input[inputmode="tel"], //input[@name="phone"] with value: "7722281164"
+✅ Enter mobile phone number: 7722281164
+➡️ Enter email: 001ksb@gmail.com
+➡️ Fill one of: input[name="email"], input[inputmode="email"], //input[@name="email"] with value: "001ksb@gmail.com"
+✅ Fill one of: input[name="email"], input[inputmode="email"], //input[@name="email"] with value: "001ksb@gmail.com"
+✅ Enter email: 001ksb@gmail.com
+➡️ Click on Continue to Verification button
+➡️ Clicking on: button:has-text("Continue to Verification") | //button[contains(text(), "Continue to Verification")] | [role="button"][name="Continue to Verification"]
+✅ Clicking on: button:has-text("Continue to Verification") | //button[contains(text(), "Continue to Verification")] | [role="button"][name="Continue to Verification"]
+✅ Click on Continue to Verification button
+➡️ Enter OTP digits
+✅ Enter OTP digits
+➡️ Wait for URL: https://int-customerportal.lendingpoint.com/apply/income-fill-address
+✅ Wait for URL: https://int-customerportal.lendingpoint.com/apply/income-fill-address
+➡️ Enter Address field
+➡️ Type into input[name="address"]
+✅ Type into input[name="address"]
+✅ Enter Address field
+➡️ Enter City field
+➡️ Type into input[name="city"]
+✅ Type into input[name="city"]
+✅ Enter City field
+➡️ Click on DropDown & Select State
+➡️ Clicking on: //button[@role="combobox" and .//label[text()="State"]]
+✅ Clicking on: //button[@role="combobox" and .//label[text()="State"]]
+➡️ Select dropdown option: AL
+✅ Select dropdown option: AL
+✅ Click on DropDown & Select State
+➡️ Enter Zip Code
+➡️ Type into input[name="zipCode"]
+✅ Type into input[name="zipCode"]
+✅ Enter Zip Code
+➡️ Click On Continue to Your Income Button
+➡️ Clicking on: button[type="submit"]
+✅ Clicking on: button[type="submit"]
+✅ Click On Continue to Your Income Button
+➡️ Type into Annual Income
+✅ Type into Annual Income
+➡️ Select Employment Type
+➡️ Clicking on: //button[@role="combobox" and .//label[text()="Income Type"]]
+✅ Clicking on: //button[@role="combobox" and .//label[text()="Income Type"]]
+➡️ Select dropdown option: Self-Employed
+✅ Select dropdown option: Self-Employed
+✅ Select Employment Type
+➡️ Type into Company Name
+✅ Type into Company Name
+➡️ Clicking on: button[type="submit"]
+✅ Clicking on: button[type="submit"]
+➡️ Type into DOB
+✅ Type into DOB
+➡️ Type into SSN
+✅ Type into SSN
+➡️ Clicking on: button[type="submit"]
+✅ Clicking on: button[type="submit"]

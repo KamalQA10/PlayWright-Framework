@@ -1,0 +1,65 @@
+➡️  Navigate to start page
+✅  Navigate to start page
+➡️  Click on Apply Now & wait for new tab
+➡️ 🔘 Attempting to click on one of: //button[contains(text(), "Apply Now")] | button:has-text("Apply Now")
+✅ Click succeeded for selector: //button[contains(text(), "Apply Now")]
+✅ 🔘 Attempting to click on one of: //button[contains(text(), "Apply Now")] | button:has-text("Apply Now")
+✅  Click on Apply Now & wait for new tab
+➡️ Enter first name: Ruby
+➡️ Fill one of: input[name="firstName"], input[placeholder="Input Place Holder"], //*[@class='flex gap-3 mt-8']/div[1]/div with value: "Ruby"
+✅ Fill one of: input[name="firstName"], input[placeholder="Input Place Holder"], //*[@class='flex gap-3 mt-8']/div[1]/div with value: "Ruby"
+✅ Enter first name: Ruby
+➡️ Enter last name: Walsh
+➡️ Fill one of: input[name="lastName"] with value: "Walsh"
+✅ Fill one of: input[name="lastName"] with value: "Walsh"
+✅ Enter last name: Walsh
+➡️ Enter last name: 5000
+➡️ Fill one of: input[name="desiredLoanAmount"] with value: "5000"
+✅ Fill one of: input[name="desiredLoanAmount"] with value: "5000"
+✅ Enter last name: 5000
+➡️ click On Loan Purpose Drop Button
+➡️ 🔘 Attempting to click on one of: svg[class*="chevron-down"] | //svg[contains(@class, "chevron-down")]
+✅ Click succeeded for selector: svg[class*="chevron-down"]
+✅ 🔘 Attempting to click on one of: svg[class*="chevron-down"] | //svg[contains(@class, "chevron-down")]
+➡️ Select visible dropdown option "Debt consolidation"
+✅ Select visible dropdown option "Debt consolidation"
+✅ click On Loan Purpose Drop Button
+➡️ click On continue To Contact Button
+➡️ 🔘 Attempting to click on one of: button:has-text("Continue to Contact Information") | //button[contains(text(),"Continue to Contact Information")] | [role="button"][name="Continue to Contact Information"]
+✅ Click succeeded for selector: button:has-text("Continue to Contact Information")
+✅ 🔘 Attempting to click on one of: button:has-text("Continue to Contact Information") | //button[contains(text(),"Continue to Contact Information")] | [role="button"][name="Continue to Contact Information"]
+✅ click On continue To Contact Button
+➡️ Enter mobilePhone number: 7722281913
+➡️ Fill one of: input[name="phone"], input[inputmode="tel"], //input[@name="phone"] with value: "7722281913"
+✅ Fill one of: input[name="phone"], input[inputmode="tel"], //input[@name="phone"] with value: "7722281913"
+✅ Enter mobilePhone number: 7722281913
+➡️ Enter EmailId: 001ksb@gmail.com
+➡️ Fill one of: input[name="email"], input[inputmode="email"], //input[@name="email"] with value: "001ksb@gmail.com"
+✅ Fill one of: input[name="email"], input[inputmode="email"], //input[@name="email"] with value: "001ksb@gmail.com"
+✅ Enter EmailId: 001ksb@gmail.com
+➡️ click On continue To Verification Button
+➡️ 🔘 Attempting to click on one of: button:has-text("Continue to Verification") | //button[contains(text(), "Continue to Verification")] | [role="button"][name="Continue to Verification"]
+✅ Click succeeded for selector: button:has-text("Continue to Verification")
+✅ 🔘 Attempting to click on one of: button:has-text("Continue to Verification") | //button[contains(text(), "Continue to Verification")] | [role="button"][name="Continue to Verification"]
+✅ click On continue To Verification Button
+➡️ Enter OTP
+✅ Enter OTP
+➡️ Wait for verify-phone-success URL
+➡️ Wait for URL to match: https://int-customerportal.lendingpoint.com/apply/income-fill-address
+✅ Wait for URL to match: https://int-customerportal.lendingpoint.com/apply/income-fill-address
+✅ Wait for verify-phone-success URL
+➡️ Enter Address field
+➡️ Type "222333 Peachtree Place" into: input[name="address"]
+✅ Type "222333 Peachtree Place" into: input[name="address"]
+✅ Enter Address field
+➡️ Enter City field
+➡️ Type "ATLANTA" into: input[name="city"]
+✅ Type "ATLANTA" into: input[name="city"]
+✅ Enter City field
+➡️ click On State DropDown Button
+➡️ 🔘 Attempting to click on one of: //div[@class="flex space-x-4 mt-6"]/div/button | //svg[contains(@class, "chevron-down")]
+✅ Click succeeded for selector: //div[@class="flex space-x-4 mt-6"]/div/button
+✅ 🔘 Attempting to click on one of: //div[@class="flex space-x-4 mt-6"]/div/button | //svg[contains(@class, "chevron-down")]
+➡️ Select visible dropdown option "AL"
+✅ Select visible dropdown option "AL"
+✅ click On State DropDown Button
