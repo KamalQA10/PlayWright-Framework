@@ -1,0 +1,21 @@
+➡️ :- Navigate to start page
+✅ Navigate to start page
+➡️ :- Click on Apply Now & wait for new tab
+✅ Click on Apply Now & wait for new tab
+➡️ :- Enter first name: Ruby
+✅ Enter first name: Ruby
+➡️ :- Enter last name: Walsh
+✅ Enter last name: Walsh
+➡️ :- Enter loan amount: 5000
+✅ Enter loan amount: 5000
+➡️ :- Select loan purpose: Debt consolidation
+✅ Select loan purpose: Debt consolidation
+➡️ :- Click on Continue to Contact Information button
+✅ Click on Continue to Contact Information button
+➡️ :- Enter mobile phone number: 9183526796
+✅ Enter mobile phone number: 9183526796
+➡️ :- Enter email: kbisht59441@lendingpoint.com
+✅ Enter email: kbisht59441@lendingpoint.com
+➡️ :- Click on Continue to Verification button
+✅ Click on Continue to Verification button
+➡️ :- Enter OTP digits

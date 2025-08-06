@@ -40,7 +40,7 @@ export default class ContactInformationPage {
   }
 
   private generateRandomEmail(): string {
-    const randomNum = Math.floor(10000 + Math.random() * 90000); // 4-digit random number
+    const randomNum = Math.floor(10000 + Math.random() * 90000);
     return `kbisht${randomNum}@lendingpoint.com`;
   }
 
