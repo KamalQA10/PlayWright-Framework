@@ -1,0 +1,52 @@
+➡️ :- Trying to Navigate to start page
+✅ *****Navigate to start page Sucessfully*****
+➡️ :- Trying to Click on Apply Now & wait for new tab
+✅ *****Click on Apply Now & wait for new tab Sucessfully*****
+➡️ :- Trying to Enter first name: Ruby
+✅ *****Enter first name: Ruby Sucessfully*****
+➡️ :- Trying to Enter last name: Walsh
+✅ *****Enter last name: Walsh Sucessfully*****
+➡️ :- Trying to Enter loan amount: 5000
+✅ *****Enter loan amount: 5000 Sucessfully*****
+➡️ :- Trying to Select loan purpose: Debt consolidation
+✅ *****Select loan purpose: Debt consolidation Sucessfully*****
+➡️ :- Trying to Click on Continue to Contact Information button
+✅ *****Click on Continue to Contact Information button Sucessfully*****
+➡️ :- Trying to Enter mobile phone number: 9183526540
+✅ *****Enter mobile phone number: 9183526540 Sucessfully*****
+➡️ :- Trying to Enter email: kbisht+ksb74987@lendingpoint.com
+✅ *****Enter email: kbisht+ksb74987@lendingpoint.com Sucessfully*****
+➡️ :- Trying to Click on Continue to Verification button
+✅ *****Click on Continue to Verification button Sucessfully*****
+➡️ :- Trying to Enter OTP digits
+✅ *****Enter OTP digits Sucessfully*****
+➡️ :- Trying to Enter Address field
+✅ *****Enter Address field Sucessfully*****
+➡️ :- Trying to Enter City field
+✅ *****Enter City field Sucessfully*****
+➡️ :- Trying to Click on DropDown & Select State
+✅ *****Click on DropDown & Select State Sucessfully*****
+➡️ :- Trying to Enter Zip Code
+✅ *****Enter Zip Code Sucessfully*****
+➡️ :- Trying to Click On Continue to Your Income Button
+✅ *****Click On Continue to Your Income Button Sucessfully*****
+➡️ :- Trying to Select Employment Type
+✅ *****Select Employment Type Sucessfully*****
+➡️ :- Trying to Enter DOB
+✅ *****Enter DOB Sucessfully*****
+➡️ :- Trying to Enter SSN
+✅ *****Enter SSN Sucessfully*****
+➡️ :- Trying to Click On See Your Options Button
+✅ *****Click On See Your Options Button Sucessfully*****
+✅ Selected loan amount: $3,500
+➡️ :- Trying to Click On Confirm Offers Button
+✅ *****Click On Confirm Offers Button Sucessfully*****
+➡️ :- Trying to Click On Let's Go Button
+✅ *****Click On Let's Go Button Sucessfully*****
+➡️ :- Trying to Click On Connect Bank Account Button
+✅ *****Click On Connect Bank Account Button Sucessfully*****
+➡️ :- Trying to Click On 'Continue As Guest' Button
+✅ iframe found: https://int-customerportal.lendingpoint.com/apply/bank-information
+🧾 Iframe HTML (trimmed): <!DOCTYPE html><html lang="en"><head><script type="text/javascript" async="" src="https://edge.fullstory.com/datalayer/v4/latest.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-6DFBSCD2P0&amp;cx=c&amp;_slc=1" nonce=""></script><script async="" crossorigin="anonymous" src="https://edge.fullstory.com/s/fs.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js" nonce=""></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZELLJFWKS8&amp;cx=c&amp;gtm=45He5861v78718475za200&amp;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~105103161~105103163~105135708~105135710" nonce=""></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TV99TJK&amp;gtm_auth=dmcEgdeBVK8l_bURa6NRAg&amp;gtm_preview=env-78&amp;gtm_cookies_win=x"></script><script nonce="">
+      (function(w,d,s,l,i){w[l]=w[l]||[];
+        w[l].pu...

@@ -18,5 +18,10 @@
   "ssn": "666588636",
   "defaultOTP": "123456",
   "incomefilladdressURL": "https://int-customerportal.lendingpoint.com/apply/income-fill-address",
-  "yourincome": "https://int-customerportal.lendingpoint.com/apply/your-income"
+  "yourincome": "https://int-customerportal.lendingpoint.com/apply/your-income",
+  "resumptiveFlowURL": "https://int-customerportal.lendingpoint.com/apply/resumptive-flow",
+  "offeramount": "5000",
+  "bankName": "First Platypus Bank",
+  "bankUserName": "user_custom",
+  "bankPassword": "{\"override_accounts\":[{\"starting_balance\":23630,\"type\":\"depository\",\"subtype\":\"checking\",\"identity\":{\"names\":[\"John Smith\"]}},{\"starting_balance\":25215,\"type\":\"depository\",\"subtype\":\"savings\",\"identity\":{\"names\":[\"John Smith\"]}}]}"
 }

@@ -8,7 +8,9 @@ test.describe.parallel('DTC-NEW End 2 End Flow', () => {
     verifyPhoneOtp,
     incomeFillAddressPage,
     yourIncomePage,
-    aboutYouPage
+    aboutYouPage,
+    offersPage,
+    bankInformationPage
   }) => {
     // Step 1: Apply Now Form
     await applyNowPage.enterFirstName(testData.firstName);
@@ -40,8 +42,21 @@ test.describe.parallel('DTC-NEW End 2 End Flow', () => {
     await yourIncomePage.clickContinueToAboutYou();
 
     // Step 6: About You Details
-    await aboutYouPage.enterDOB(testData.dob)
-    await aboutYouPage.enterSSN(testData.ssn)
+    await aboutYouPage.enterDOB(testData.dob);
+    await aboutYouPage.enterSSN(testData.ssn);
     await aboutYouPage.clickSeeYourOptions();
+
+    // step 7: Select Offer
+    await offersPage.selectOffer(testData.offeramount);
+    await offersPage.clickConfirmOffers();
+    await offersPage.clickOnLetsGoButton();
+
+    // step 8: Bank Information Page
+    await bankInformationPage.clickConfirmOffers();
+    await bankInformationPage.clickOnContinueAsGuest(testData.bankName, testData.bankUserName, testData.bankPassword);
+    await bankInformationPage.clickOnSetUpAutoPay();
+    await bankInformationPage.clickOncontinueToReviewYourLoan();
+    await bankInformationPage.clickOnContinuetoLoanAgreement();
+    
   });
 });

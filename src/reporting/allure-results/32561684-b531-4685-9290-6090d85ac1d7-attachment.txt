@@ -1,0 +1,47 @@
+➡️ :- Trying to Navigate to start page
+✅ *****Navigate to start page Sucessfully*****
+➡️ :- Trying to Click on Apply Now & wait for new tab
+✅ *****Click on Apply Now & wait for new tab Sucessfully*****
+➡️ :- Trying to Enter first name: Ruby
+✅ *****Enter first name: Ruby Sucessfully*****
+➡️ :- Trying to Enter last name: Walsh
+✅ *****Enter last name: Walsh Sucessfully*****
+➡️ :- Trying to Enter loan amount: 5000
+✅ *****Enter loan amount: 5000 Sucessfully*****
+➡️ :- Trying to Select loan purpose: Debt consolidation
+✅ *****Select loan purpose: Debt consolidation Sucessfully*****
+➡️ :- Trying to Click on Continue to Contact Information button
+✅ *****Click on Continue to Contact Information button Sucessfully*****
+➡️ :- Trying to Enter mobile phone number: 9183526357
+✅ *****Enter mobile phone number: 9183526357 Sucessfully*****
+➡️ :- Trying to Enter email: kbisht13668@lendingpoint.com
+✅ *****Enter email: kbisht13668@lendingpoint.com Sucessfully*****
+➡️ :- Trying to Click on Continue to Verification button
+✅ *****Click on Continue to Verification button Sucessfully*****
+➡️ :- Trying to Enter OTP digits
+✅ *****Enter OTP digits Sucessfully*****
+➡️ :- Trying to Enter Address field
+✅ *****Enter Address field Sucessfully*****
+➡️ :- Trying to Enter City field
+✅ *****Enter City field Sucessfully*****
+➡️ :- Trying to Click on DropDown & Select State
+✅ *****Click on DropDown & Select State Sucessfully*****
+➡️ :- Trying to Enter Zip Code
+✅ *****Enter Zip Code Sucessfully*****
+➡️ :- Trying to Click On Continue to Your Income Button
+✅ *****Click On Continue to Your Income Button Sucessfully*****
+➡️ :- Trying to Select Employment Type
+✅ *****Select Employment Type Sucessfully*****
+➡️ :- Trying to Enter DOB
+✅ *****Enter DOB Sucessfully*****
+➡️ :- Trying to Enter SSN
+✅ *****Enter SSN Sucessfully*****
+➡️ :- Trying to Click On See Your Options Button
+✅ *****Click On See Your Options Button Sucessfully*****
+➡️ :- Trying to Move slider to $5000
+⏳ Waiting for slider container (adjust selector if needed)
+⚠️ slider container not found — continuing to check slider directly
+⏳ Waiting for slider element to be visible...
+🔍 Number of sliders found: 1
+Slider #0 visible: true, bounding box: { x: 453.01251220703125, y: 256.5, width: 48, height: 48 }
+⏸️ Pausing test for manual inspection. Resume test when ready...

@@ -41,14 +41,14 @@ export default class ContactInformationPage {
 
   private generateRandomEmail(): string {
     const randomNum = Math.floor(10000 + Math.random() * 90000);
-    return `kbisht${randomNum}@lendingpoint.com`;
+    return `kbisht+ksb${randomNum}@lendingpoint.com`;
   }
 
   async enterEmail(): Promise<void> {
     const email = this.generateRandomEmail();
 
     await this.common.logStep(`Enter email: ${email}`, async () => {
-      await this.common.fillOneOf(ContactInformationPage.emailAddressSelectors, "kbisht@lendingpoint.com");
+      await this.common.fillOneOf(ContactInformationPage.emailAddressSelectors, email);
     });
   }
 

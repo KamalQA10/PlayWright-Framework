@@ -14,14 +14,20 @@ export default class AboutYouPage {
 
 
   async enterDOB(value: string): Promise<void> {
-    await this.common.type(this.dobInput, value, 'DOB');
+    await this.common.logStep('Enter DOB', async () => {
+      await this.common.type(this.dobInput, value, 'DOB');
+    });
   }
 
   async enterSSN(value: string): Promise<void> {
-    await this.common.type(this.ssnInput, value, 'SSN');
+    await this.common.logStep('Enter SSN', async () => {
+      await this.common.type(this.ssnInput, value, 'SSN');
+    }); 
   }
 
   async clickSeeYourOptions(): Promise<void> {
-    await this.common.click(this.seeYourOptionsButton);
+    await this.common.logStep('Click On See Your Options Button', async () => {
+      await this.common.click(this.seeYourOptionsButton);
+    });
   }
 }
