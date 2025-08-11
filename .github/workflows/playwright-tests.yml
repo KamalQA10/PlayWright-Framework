@@ -31,4 +31,4 @@ jobs:
 
         with:
           name: playwright-report
-          path: src/reporting/allure-report
+          path: playwright-report
