@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test:docker": "cross-env TEST_ENV=int npx playwright test --project=ui --headless",
+    "test:docker": "cross-env TEST_ENV=int npx playwright test --project=ui",
     "clean:allure": "rimraf allure-results src/reporting/allure-results src/reporting/allure-report",
     "test:int": "cross-env TEST_ENV=int npx playwright test --project=ui --headed",
     "test:qa": "cross-env TEST_ENV=qa npx playwright test --project=ui --headed",
