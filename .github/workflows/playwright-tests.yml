@@ -1,51 +1,31 @@
-name: Playwright Tests
-
-on:
-  push:
-    branches: [main]
-  pull_request:
-
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Clean allure folders (host-side)
-        run: |
-          rm -rf playwright-report
-          rm -rf src/reporting/allure-results
-          rm -rf src/reporting/allure-report
-
-      - name: Build Docker image
-        run: docker build -t playwright-framework .
-
-      - name: Run Playwright tests inside Docker
-        run: |
+      - run: npm ci
+      - run: rm -rf playwright-report src/reporting/allure-results src/reporting/allure-report
+      - run: docker build -t playwright-framework .
+      
+      # Run UI tests first
+      - run: |
           docker run --rm \
             -e TEST_ENV=int \
             -v ${{ github.workspace }}/playwright-report:/app/playwright-report \
             -v ${{ github.workspace }}/src/reporting/allure-results:/app/src/reporting/allure-results \
             -v ${{ github.workspace }}/src/reporting/allure-report:/app/src/reporting/allure-report \
-            playwright-framework npm run test:allure
+            playwright-framework npx playwright test --project=ui
 
-      - name: Upload Playwright HTML report
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-html-report
-          path: playwright-report
+      # Run API tests after UI tests finish
+      - run: |
+          docker run --rm \
+            -e TEST_ENV=int \
+            -v ${{ github.workspace }}/playwright-report:/app/playwright-report \
+            -v ${{ github.workspace }}/src/reporting/allure-results:/app/src/reporting/allure-results \
+            -v ${{ github.workspace }}/src/reporting/allure-report:/app/src/reporting/allure-report \
+            playwright-framework npx playwright test --project=api
 
-      - name: Upload Allure report
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-report
-          path: src/reporting/allure-report
+      # Upload reports steps remain same

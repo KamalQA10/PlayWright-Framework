@@ -6,9 +6,9 @@ import { envConfigUI } from './src/ui/config_UI/envConfigUI';
 import { envConfigAPI } from './src/api/config_API/envConfigAPI';
 
 export default defineConfig({
-  fullyParallel: true,
+  fullyParallel: false,
   forbidOnly: !!process.env.CI,
-  workers: 4,
+  workers: 1,
   reporter: [
     ['html', { open: 'never' }],
     ['allure-playwright', { resultsDir: './src/reporting/allure-results' }],
