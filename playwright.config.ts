@@ -21,7 +21,7 @@ export default defineConfig({
       retries: envConfigUI.retries,
       use: {
         baseURL: envConfigUI.baseUrl,
-        headless: process.env.CI ? true : false,
+        headless: true,
         ...devices['Desktop Chrome'],
       },
     },
@@ -32,7 +32,7 @@ export default defineConfig({
       retries: envConfigAPI.retries,
       use: {
         baseURL: envConfigAPI.baseUrl,
-        headless: process.env.CI ? true : false,
+        headless: true,
       },
     },
   ],
