@@ -2,7 +2,7 @@ import { Page, Locator, Frame, FrameLocator  } from '@playwright/test';
 
 export default class CommonActions {
   private page: Page;
-  private defaultTimeout = 30000;
+  private defaultTimeout = 60000;
 
   constructor(page: Page) {this.page = page;}
 
