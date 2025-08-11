@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    
     "test:docker": "cross-env TEST_ENV=int npx playwright test --project=ui",
     "test:allure": "ts-node -r tsconfig-paths/register node_modules/.bin/playwright test --config=playwright.config.ts && rm -rf src/reporting/allure-report && npx allure generate src/reporting/allure-results -o src/reporting/allure-report",
     "test:int": "cross-env TEST_ENV=int npx playwright test --project=ui --headed",
