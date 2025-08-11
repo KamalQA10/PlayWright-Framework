@@ -1,6 +1,0 @@
-Attempt 1 failed for selector: //button[@role="combobox"
-⚠️ Click failed for selector: //button[@role="combobox"
-❌ [FAIL] 🔘 Attempting to click on one of: //button[@role="combobox"
-   → Error: ❌ Click failed: No valid selector found in [//button[@role="combobox"]
-❌ [FAIL] Click on DropDown & Select State
-   → Error: ❌ Click failed: No valid selector found in [//button[@role="combobox"]

@@ -12,6 +12,7 @@
       "@tests/*": ["tests/*"],
       "@data/*": ["ui/data/*"],
       "@config_UI/*": ["ui/config_UI/*"],
+      "@helper/*": ["ui/Utils_UI/helper/*"],
 
       // Added for API layer
       "@apiUtils/*": ["api/utils_API/*"],

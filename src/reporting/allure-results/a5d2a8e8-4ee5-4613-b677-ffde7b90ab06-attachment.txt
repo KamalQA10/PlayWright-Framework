@@ -1,2 +1,0 @@
-⚠️ Wait failed for selector: button:has-text("Continue as guest") — Attempt 1/1
-❌ Click On 'Continue As Guest' Button

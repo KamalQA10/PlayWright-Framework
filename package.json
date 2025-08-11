@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "test:docker": "cross-env TEST_ENV=int npx playwright test --project=ui --headed",
     "clean:allure": "rimraf allure-results src/reporting/allure-results src/reporting/allure-report",
     "test:int": "cross-env TEST_ENV=int npx playwright test --project=ui --headed",
     "test:qa": "cross-env TEST_ENV=qa npx playwright test --project=ui --headed",
@@ -10,7 +11,8 @@
     "test:api_INT": "cross-env TEST_ENV=int npx playwright test --project=api",
     "test:api_QA": "cross-env TEST_ENV=qa npx playwright test --project=api",
     "test:allure": "npm run clean:allure && ts-node -r tsconfig-paths/register node_modules/.bin/playwright test --config=playwright.config.ts && npx allure generate src/reporting/allure-results --clean -o src/reporting/allure-report",
-    "install:playwright": "npx playwright install"
+    "install:playwright": "npx playwright install",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +32,7 @@
   "dependencies": {
     "axios": "^1.11.0",
     "chalk": "^5.5.0",
-    "dotenv": "^17.2.1"
+    "dotenv": "^17.2.1",
+    "playwright": "^1.54.2"
   }
 }

@@ -1,10 +1,11 @@
 import { Page, Locator } from '@playwright/test';
 import { getActiveResourcesInfo } from 'process';
-import CommonActions from 'ui/Utils_UI/helper/CommonActions';
+import CommonActions from '@helper/CommonActions';
 
 export default class BankInformationPage {
+    private common: CommonActions;
   
-  constructor(private page: Page, private common: CommonActions) {
+  constructor(private page: Page, ) {
     this.common = new CommonActions(page);
   }
 
@@ -97,7 +98,6 @@ export default class BankInformationPage {
     async clickOnContinuetoLoanAgreement(): Promise<void> {
         await this.common.logStep("Click On Continue to Loan Agreement Button", async () => {
             await this.common.click(BankInformationPage.ContinuetoLoanAgreementButton);
-            await this.page.waitForTimeout(50000);
         });
     }
 

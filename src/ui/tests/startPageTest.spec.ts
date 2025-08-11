@@ -1,6 +1,6 @@
-import { test } from 'ui/Utils_UI/fixtures/testSetup';
+import { test, expect } from 'ui/Utils_UI/fixtures/testSetup';
 
-test.describe.parallel('DTC-NEW End 2 End Flow', () => {
+test.describe('DTC-NEW End 2 End Flow', () => {
   test('Step 1: Fill basic info', async ({
     applyNowPage,
     testData,

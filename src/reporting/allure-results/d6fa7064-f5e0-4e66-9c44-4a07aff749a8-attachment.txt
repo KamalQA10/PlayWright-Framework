@@ -1,6 +1,0 @@
-Attempt 1 failed for selector: //svg[contains(@class, "chevron-down")]
-⚠️ Click failed for selector: //svg[contains(@class, "chevron-down")]
-❌ [FAIL] 🔘 Attempting to click on one of: //svg[contains(@class, "chevron-down")]
-   → Error: ❌ Click failed: No valid selector found in [//svg[contains(@class, "chevron-down")]]
-❌ [FAIL] Click on DropDown & Select Employment Type
-   → Error: ❌ Click failed: No valid selector found in [//svg[contains(@class, "chevron-down")]]

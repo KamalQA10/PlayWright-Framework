@@ -1,2 +1,0 @@
-⚠️ Wait failed for selector: #aut-secondary-button — Attempt 1/1
-❌ Click On 'Continue As Guest' Button
