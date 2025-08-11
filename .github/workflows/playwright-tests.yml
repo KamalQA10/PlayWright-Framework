@@ -8,7 +8,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -21,11 +20,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Clean allure folders (host-side)
+        run: |
+          rm -rf playwright-report
+          rm -rf src/reporting/allure-results
+          rm -rf src/reporting/allure-report
+
       - name: Build Docker image
         run: docker build -t playwright-framework .
-
-      - name: Clean allure-report folder (host side)
-        run: rm -rf src/reporting/allure-report
 
       - name: Run Playwright tests inside Docker
         run: |
