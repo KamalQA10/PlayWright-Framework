@@ -1,0 +1,5 @@
+➡️ :- Trying to Navigate to start page
+✅ *****Navigate to start page Sucessfully*****
+➡️ :- Trying to Click on Apply Now & wait for new tab
+✅ *****Click on Apply Now & wait for new tab Sucessfully*****
+Looking for file: C:\Users\kamal.bisht\Desktop\PlayWrite_Framework\src\ui\data\Data.json

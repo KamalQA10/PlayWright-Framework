@@ -1,13 +1,12 @@
-pipeline 
-{
+pipeline {
     agent any
 
-    parameters {choice(name: 'ENVIRONMENT', choices: ['qa_UI', 'int_UI', 'qa_API', 'int_API'], description: 'Select test type and environment')}
+    parameters {
+        choice(name: 'ENVIRONMENT', choices: ['qa_UI', 'int_UI', 'qa_API', 'int_API'], description: 'Select test type and environment')
+    }
 
     environment {
-        ALLURE_RESULTS_DIR = 'src/reporting/allure-results'
-        ALLURE_REPORT_DIR = 'src/reporting/allure-report'
-        PLAYWRIGHT_REPORT_DIR = 'playwright-report'
+        IMAGE_NAME = 'playwrite_framework'
     }
 
     stages {
@@ -17,35 +16,35 @@ pipeline
             }
         }
 
-        stage('Install dependencies') {
-            steps {
-                bat 'npm ci'
-                bat 'npm run install:playwright'
-            }
-        }
-
-        stage('Clean Allure Reports') {
-            steps {
-                bat 'npm run clean:allure'
-            }
-        }
-
-        stage('Run Playwright Tests') {
+        stage('Build Docker Image') {
             steps {
                 script {
+                    bat "docker build -t %IMAGE_NAME% ."
+                }
+            }
+        }
+
+        stage('Run Tests in Docker') {
+            steps {
+                script {
+                    def command = ""
+
                     if (params.ENVIRONMENT == 'qa_UI') {
-                        bat 'npm run test:qa'
+                        command = "npm run test:qa"
                     } else if (params.ENVIRONMENT == 'int_UI') {
-                        bat 'npm run test:int'
+                        command = "npm run test:int"
                     } else if (params.ENVIRONMENT == 'qa_API') {
-                        bat 'npm run test:api_QA'
+                        command = "npm run test:api_QA"
                     } else if (params.ENVIRONMENT == 'int_API') {
-                        bat 'npm run test:api_INT'
+                        command = "npm run test:api_INT"
                     } else {
                         error "Unknown environment: ${params.ENVIRONMENT}"
                     }
+
+                    // Docker run with command
+                    bat "docker run --rm %IMAGE_NAME% cmd /c \"${command}\""
                 }
             }
         }
     }
-}    
+}

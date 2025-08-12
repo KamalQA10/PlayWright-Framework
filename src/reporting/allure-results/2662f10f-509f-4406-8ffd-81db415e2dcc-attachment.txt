@@ -1,0 +1,14 @@
+➡️ :- Trying to Navigate to start page
+✅ *****Navigate to start page Sucessfully*****
+➡️ :- Trying to Click on Apply Now & wait for new tab
+✅ *****Click on Apply Now & wait for new tab Sucessfully*****
+➡️ :- Trying to Enter first name: Ruby
+✅ *****Enter first name: Ruby Sucessfully*****
+➡️ :- Trying to Enter last name: Walsh
+✅ *****Enter last name: Walsh Sucessfully*****
+➡️ :- Trying to Enter loan amount: 5000
+✅ *****Enter loan amount: 5000 Sucessfully*****
+➡️ :- Trying to Select loan purpose: Debt consolidation
+✅ *****Select loan purpose: Debt consolidation Sucessfully*****
+➡️ :- Trying to Click on Continue to Contact Information button
+✅ *****Click on Continue to Contact Information button Sucessfully*****
